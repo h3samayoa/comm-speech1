@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ section.title }}</title>
+    <link rel="stylesheet" href="{{ get_url(path="css/style.css") }}">
+    
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+    <header>
+        <h1>{{ section.title }}</h1>
+        <div class="intro">{{ section.content | safe }}</div>
+    </header>
+    
+    <main>
+        <div class="vocab-list">
+            <ul class="vocab-terms">
+                {% set data = load_data(path="data/vocab.toml") %}
+                {% for entry in data.entries %}
+                <li class="vocab-term" id="{{ entry.term | slugify }}">
+                    <h3>{{ entry.term }}</h3>
+                    <div class="definition">
+                        <p>{{ entry.definition }}</p>
+                        
+                        <div class="extras">
+                            {% if entry.equation %}
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $${{ entry.equation }}$$
+                                </div>
+                            </details>
+                            {% endif %}
+                            
+                            {% if entry.image %}
+                            <details class="image-detail">
+                                <summary>Image</summary>
+                                <div class="image-container">
+                                    <img src="{{ entry.image }}" 
+                                         {% if entry.image_width %}width="{{ entry.image_width }}"{% endif %}
+                                         {% if entry.image_height %}height="{{ entry.image_height }}"{% endif %}
+                                         alt="{{ entry.term }}">
+                                </div>
+                            </details>
+                            {% endif %}
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Created with <a href="https://www.getzola.org/">Zola</a></p>
+    </footer>
+</body>
+</html>

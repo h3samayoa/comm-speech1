@@ -1,0 +1,60 @@
+# All vocabulary entries in a single TOML file
+#image support has been added as well 
+
+[[entries]]
+term = "Vector"
+definition = "An ordered array of numbers that can represent a point in space or a quantity with both magnitude and direction. In machine learning, vectors typically represent features or encoded information about data points."
+equation = "\\vec{v} = [v_1, v_2, \\ldots, v_n]"
+
+[[entries]]
+term = "Matrix"
+definition = "A rectangular array of numbers arranged in rows and columns. Matrices are fundamental in machine learning for representing data, transformations, and the parameters of models."
+equation = "A = \\begin{bmatrix} a_{11} & a_{12} & \\cdots & a_{1n} \\\\ a_{21} & a_{22} & \\cdots & a_{2n} \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ a_{m1} & a_{m2} & \\cdots & a_{mn} \\end{bmatrix}"
+
+[[entries]]
+term = "Embedding"
+definition = "A mapping from discrete objects (such as words, sentences, or items) to vectors of real numbers in a continuous vector space, typically of lower dimensionality. Embeddings capture semantic relationships between the original objects."
+equation = "E: X \\rightarrow \\mathbb{R}^d"
+
+[[entries]]
+term = "Neural Network"
+definition = "A computational model inspired by the structure and function of biological neural networks. Neural networks consist of interconnected nodes (neurons) that process and transform input data through layers to produce an output."
+equation = "y = \\sigma(\\sum_{i=1}^{n} w_i x_i + b)"
+
+[[entries]]
+term = "Recurrent Neural Network"
+definition = "A class of neural networks designed to work with sequential data by maintaining a hidden state that captures information about previous inputs. RNNs process sequences one element at a time while updating their internal state."
+equation = "h_t = \\sigma(W_{xh} x_t + W_{hh} h_{t-1} + b_h)"
+
+[[entries]]
+term = "RLHF"
+definition = "Reinforcement Learning from Human Feedback. A training approach that combines reinforcement learning with human preferences to align AI systems with human values and intentions. RLHF typically involves fine-tuning language models using a reward model trained on human preference data."
+
+[[entries]]
+term = "Model"
+definition = "A mathematical or computational representation that approximates a relationship between inputs and outputs. In machine learning, a model is defined by its architecture and parameters, which are learned from data."
+equation = "f_\\theta: X \\rightarrow Y"
+
+[[entries]]
+term = "Attention"
+definition = "A mechanism that allows neural networks to focus on specific parts of the input when producing an output. Attention computes a weighted sum of values based on the relevance of corresponding keys to a query."
+equation = "\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V"
+
+[[entries]]
+term = "Self-Attention"
+definition = "A type of attention mechanism where the queries, keys, and values are all derived from the same input sequence. Self-attention allows a model to consider the relationships between all positions in a sequence when computing representations."
+equation = "\\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V, \\text{ where } Q, K, V \\text{ are derived from the same input}"
+
+[[entries]]
+term = "LLM"
+definition = "Large Language Model. A neural network-based model with billions or trillions of parameters trained on vast amounts of text data. LLMs can understand and generate human language, reason about various topics, and perform a wide range of language-based tasks."
+
+[[entries]]
+term = "Continuous Vector Space"
+definition = "A mathematical space where points are represented as vectors with real-valued coordinates. In machine learning, continuous vector spaces provide a framework for encoding features, semantics, and relationships between entities in a way that preserves similarity and enables operations like interpolation."
+equation = "\\mathbb{R}^n"
+
+[[entries]]
+term = "Transformer"
+definition = "A neural network architecture based on self-attention mechanisms, without recurrence or convolution. Transformers process entire sequences in parallel and use multiple attention heads to capture different types of relationships, making them highly effective for natural language processing and other sequence tasks."
+equation = "\\text{MultiHead}(Q, K, V) = \\text{Concat}(\\text{head}_1, \\ldots, \\text{head}_h)W^O"

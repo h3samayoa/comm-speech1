@@ -7,5 +7,6 @@
 
 - [ ] make a list of vocab wrds 
 - [ ] create the website using a zola theme with latex support 
+- [ ] add images/equation in latex for each entry
 - [ ] deploy to github pages 
 - [ ] create a qr code linking to the website 
