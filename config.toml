@@ -1,5 +1,5 @@
 # Basic site configuration
-base_url = "https://localhost:3000"
+base_url = "https://h3samayoa.github.io/comm-speech1"
 title = "Vocabulary List"
 description = "A simple vocabulary list with LaTeX equations and images"
 
@@ -11,7 +11,6 @@ katex_auto_render = true
 # Set up Markdown rendering
 [markdown]
 highlight_code = false
-render_emoji = true
 external_links_target_blank = true
 
 # Set taxonomies for organization if needed
