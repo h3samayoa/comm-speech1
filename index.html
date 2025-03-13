@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Vocabulary</title>
+    <link rel="stylesheet" href="https://h3samayoa.github.io/css/style.css">
+    
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+    <header>
+        <h1>Machine Learning Vocabulary</h1>
+        <div class="intro"><p>A collection of machine learning terminology with definitions and equations.</p>
+</div>
+    </header>
+    
+    <main>
+        <div class="vocab-list">
+            <ul class="vocab-terms">
+                
+                
+                <li class="vocab-term" id="vector">
+                    <h3>Vector</h3>
+                    <div class="definition">
+                        <p>An ordered array of numbers that can represent a point in space or a quantity with both magnitude and direction. In machine learning, vectors typically represent features or encoded information about data points.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$\vec{v} = [v_1, v_2, \ldots, v_n]$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="matrix">
+                    <h3>Matrix</h3>
+                    <div class="definition">
+                        <p>A rectangular array of numbers arranged in rows and columns. Matrices are fundamental in machine learning for representing data, transformations, and the parameters of models.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$A = \begin{bmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{bmatrix}$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="embedding">
+                    <h3>Embedding</h3>
+                    <div class="definition">
+                        <p>A mapping from discrete objects (such as words, sentences, or items) to vectors of real numbers in a continuous vector space, typically of lower dimensionality. Embeddings capture semantic relationships between the original objects.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$E: X \rightarrow \mathbb{R}^d$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="neural-network">
+                    <h3>Neural Network</h3>
+                    <div class="definition">
+                        <p>A computational model inspired by the structure and function of biological neural networks. Neural networks consist of interconnected nodes (neurons) that process and transform input data through layers to produce an output.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$y = \sigma(\sum_{i=1}^{n} w_i x_i + b)$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="recurrent-neural-network">
+                    <h3>Recurrent Neural Network</h3>
+                    <div class="definition">
+                        <p>A class of neural networks designed to work with sequential data by maintaining a hidden state that captures information about previous inputs. RNNs process sequences one element at a time while updating their internal state.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$h_t = \sigma(W_{xh} x_t + W_{hh} h_{t-1} + b_h)$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="rlhf">
+                    <h3>RLHF</h3>
+                    <div class="definition">
+                        <p>Reinforcement Learning from Human Feedback. A training approach that combines reinforcement learning with human preferences to align AI systems with human values and intentions. RLHF typically involves fine-tuning language models using a reward model trained on human preference data.</p>
+                        
+                        <div class="extras">
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="model">
+                    <h3>Model</h3>
+                    <div class="definition">
+                        <p>A mathematical or computational representation that approximates a relationship between inputs and outputs. In machine learning, a model is defined by its architecture and parameters, which are learned from data.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$f_\theta: X \rightarrow Y$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="attention">
+                    <h3>Attention</h3>
+                    <div class="definition">
+                        <p>A mechanism that allows neural networks to focus on specific parts of the input when producing an output. Attention computes a weighted sum of values based on the relevance of corresponding keys to a query.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="self-attention">
+                    <h3>Self-Attention</h3>
+                    <div class="definition">
+                        <p>A type of attention mechanism where the queries, keys, and values are all derived from the same input sequence. Self-attention allows a model to consider the relationships between all positions in a sequence when computing representations.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$\text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V, \text{ where } Q, K, V \text{ are derived from the same input}$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="llm">
+                    <h3>LLM</h3>
+                    <div class="definition">
+                        <p>Large Language Model. A neural network-based model with billions or trillions of parameters trained on vast amounts of text data. LLMs can understand and generate human language, reason about various topics, and perform a wide range of language-based tasks.</p>
+                        
+                        <div class="extras">
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="continuous-vector-space">
+                    <h3>Continuous Vector Space</h3>
+                    <div class="definition">
+                        <p>A mathematical space where points are represented as vectors with real-valued coordinates. In machine learning, continuous vector spaces provide a framework for encoding features, semantics, and relationships between entities in a way that preserves similarity and enables operations like interpolation.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$\mathbb{R}^n$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="vocab-term" id="transformer">
+                    <h3>Transformer</h3>
+                    <div class="definition">
+                        <p>A neural network architecture based on self-attention mechanisms, without recurrence or convolution. Transformers process entire sequences in parallel and use multiple attention heads to capture different types of relationships, making them highly effective for natural language processing and other sequence tasks.</p>
+                        
+                        <div class="extras">
+                            
+                            <details class="equation-detail">
+                                <summary>Equation</summary>
+                                <div class="equation">
+                                    $$\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h)W^O$$
+                                </div>
+                            </details>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Created with <a href="https://www.getzola.org/">Zola</a></p>
+    </footer>
+</body>
+</html>
